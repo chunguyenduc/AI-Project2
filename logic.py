@@ -3,16 +3,15 @@ class KnowledgeBase:
 	#clauses = []
 	
 	def __init__(self):
-		#Mang cac doi tuong Literal
+		#Mang cac Clause
 		self.clauses = []
 	
 	def getKB(self, KBString):
-		
+		#Tu cac cau trong input, ta xay dung KB
 		for i in range(len(KBString)):
 			clause = Clause()
 			clause.getClauseFromSentence(KBString[i])
 			self.clauses.append(clause)
-			'''print(len(self.clauses[i].literals))'''
 			
 	def addClause(self, clause):
 		#Dung de them not(alpha) vao KB
@@ -22,7 +21,7 @@ class KnowledgeBase:
 def splitLiteral(sentence):
 	#Ham tach cau thanh mang cac chuoi literal
 	#A OR -B => ['A', '-B']
-	#Tach bien dua vao OR
+	#Tach bien phu thuoc vao OR
 	literals = sentence.split(" OR ")
 	return literals
 	
@@ -30,7 +29,7 @@ class Clause:
 	#In logic, a clause is an expression formed from a finite collection of literals (atoms or their negations) (Source: Wikipedia)
 	#literals = []
 	def __init__(self):
-		#Mang cac doi tuong Literal
+		#Mang cac Literal
 		self.literals = []
 	
 	
@@ -51,9 +50,6 @@ class Literal:
 		
 		#isNegative == 1 neu literal am, == 0 neu literal duong
 		self.isNegative = isNegative
-	def __del__(self): 
-		self.symbol = ''
-		self.isNegative = 0
 	
 	def isNegativeOf(self, l):
 		return self.symbol == l.symbol and self.isNegative != l.isNegative
@@ -107,15 +103,6 @@ def main():
 	for i in range(len(KB.clauses)):
 		for j in range(len(KB.clauses[i].literals)):
 			print("Clause ", i, vars(KB.clauses[i].literals[j]))
-	'''
-	print(vars(KB.clauses[0].literals[0]))
-	print(vars(KB.clauses[0].literals[1]))
-	print(vars(KB.clauses[1].literals[0]))
-	print(vars(KB.clauses[1].literals[1]))
-	print(vars(KB.clauses[2].literals[0]))
-	print(vars(KB.clauses[2].literals[1]))
-	print(vars(KB.clauses[2].literals[2]))
-	print(vars(KB.clauses[3].literals[0]))
-	'''
+
 	
 main()
