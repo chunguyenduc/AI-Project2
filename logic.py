@@ -6,11 +6,11 @@ class KnowledgeBase:
 		#Mang cac Clause
 		self.clauses = []
 	
-	def getKB(self, KBString):
+	def setKB(self, KBString):
 		#Tu cac cau trong input, ta xay dung KB
 		for i in range(len(KBString)):
 			clause = Clause()
-			clause.getClauseFromSentence(KBString[i])
+			clause.setClauseFromSentence(KBString[i])
 			self.clauses.append(clause)
 			
 	def addClause(self, clause):
@@ -33,12 +33,12 @@ class Clause:
 		self.literals = []
 	
 	
-	def getClauseFromSentence(self, sentence):
+	def setClauseFromSentence(self, sentence):
 		
 		literalList = splitLiteral(sentence)
 		for i in literalList:
 			lit = Literal()
-			lit.getLiteral(i)
+			lit.setLiteral(i)
 			self.literals.append(lit)
 	def negate(self):
 		for i in self.literals:
@@ -54,7 +54,7 @@ class Literal:
 	def isNegativeOf(self, l):
 		return self.symbol == l.symbol and self.isNegative != l.isNegative
 		
-	def getLiteral(self, s):
+	def setLiteral(self, s):
 		#Ham dua chuoi ve doi tuong Literal
 		#Vi du: "-A" -> (symbol = 'A', isNegative = 0)
 		
@@ -78,7 +78,7 @@ def main():
 	alphaSentence = alphaSentence.rstrip()	#Xoa dau \n o cuoi
 	
 	alpha = Clause()
-	alpha.getClauseFromSentence(alphaSentence)
+	alpha.setClauseFromSentence(alphaSentence)
 	alpha.negate()
 	
 	
@@ -94,7 +94,7 @@ def main():
 	print(sentences)
 		
 	KB = KnowledgeBase()
-	KB.getKB(sentences)
+	KB.setKB(sentences)
 	KB.addClause(alpha)
 	
 	'''KB.printKB()'''
