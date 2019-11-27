@@ -1,0 +1,78 @@
+1. true
+2. Princess Diana (chưa xử lý lặp)
+3. false
+4. Captain Mark Phillips,Timothy Laurence
+5. Princes
+6. true
+7. Prince Andrew
+8. true
+9. true
+10. Prince Charles, Prince Andrew, Prince Edward, Princess Anne
+11. Princess Diana, Prince Charles
+12. false
+13. Princess Anne
+14. false
+15. Queen Elizabeth II, Prince Philip
+16. true
+17. false
+18. false
+19. Prince Charles, Princess Diana
+20. false
+21. true
+22. Princess Beatrice(lặp 2 lần)
+23. Prince Harry(lặp 2 lần)
+24. true
+25. false
+26. false
+27. Prince Charles, Prince Edward(lặp 2 lần)
+28. false
+29. 
+	GC = 'Prince William' ;
+	GC = 'Prince Harry' ;
+	GC = 'Princess Eugenie' ;
+	GC = 'Princess Beatrice' ;
+	GC = 'Peter Phillips' ;
+	GC = 'Zara Tindall' ;
+	GC = 'Lady Louise Windsor' ;
+	GC = 'Viscount James'.
+30. 
+	Child = 'Prince Charles',
+        Parent = 'Queen Elizabeth II' ;
+	Child = 'Prince Charles',
+	Parent = 'Prince Philip' ;
+	Child = 'Prince Andrew',
+	Parent = 'Queen Elizabeth II' ;
+	Child = 'Prince Andrew',
+	Parent = 'Prince Philip' ;
+	Child = 'Prince Edward',
+	Parent = 'Queen Elizabeth II' ;
+	Child = 'Prince Edward',
+	Parent = 'Prince Philip' ;
+	Child = 'Prince William',
+	Parent = 'Princess Diana' ;
+	Child = 'Prince William',
+	Parent = 'Prince Charles' ;
+	Child = 'Prince Harry',
+	Parent = 'Princess Diana' ;
+	Child = 'Prince Harry',
+	Parent = 'Prince Charles' ;
+	Child = 'Peter Phillips',
+	Parent = 'Captain Mark Phillips' ;
+	Child = 'Peter Phillips',
+	Parent = 'Princess Anne' ;
+	Child = 'Viscount James',
+	Parent = 'Prince Edward' ;
+	Child = 'Viscount James',
+	Parent = 'Countess Sophie Rhys-Jones' ;
+	Child = 'Prince George',
+	Parent = 'Duchess Kate Middleton' ;
+	Child = 'Prince George',
+	Parent = 'Prince William' ;
+	Child = 'Prince Louis',
+	Parent = 'Duchess Kate Middleton' ;
+	Child = 'Prince Louis',
+	Parent = 'Prince William' ;
+	Child = 'Archie Harrison Mountbatten-Windsor',
+	Parent = 'Prince Harry' ;
+	Child = 'Archie Harrison Mountbatten-Windsor',
+	Parent = 'Duchess Meghan Markle'.

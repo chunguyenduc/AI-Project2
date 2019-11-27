@@ -1,0 +1,73 @@
+1. true
+2. Princess Diana
+3. false
+4. Captain Mark Phillips, Timothy Laurences
+5. Prince Charles
+6. true
+7. Prince Andrew
+8. true
+9. true
+10. Prince Charles, Prince Andrew, Prince Edward, Princess Anne
+11. Prince Charles, Princess Diana
+12. false
+13. Princess Anne
+14. false
+15. Queen Elizabeth II, Prince Philip
+16. true
+17. false
+18. false
+19. Princess Diana, Prince Charles
+20. false
+21. true
+22. Princess Beatrice
+23. Prince Harry
+24. true
+25. false
+26. false
+27. Prince Charles, Princess Anne, Prince Edward
+28. false
+29. Prince William, Prince Harry, Princess Eugenie, Princess Beatrice, Peter Phillips, Zara Tindall, Lady Louise Windsor, Viscount James
+30. 
+son(Prince Charles,Queen Elizabeth II)
+son(Prince Andrew,Queen Elizabeth II)
+son(Prince Edward,Queen Elizabeth II)
+
+son(Prince Charles,Prince Philip)
+son(Prince Andrew,Prince Philip)
+son(Prince Edward,Prince Philip)
+
+son(Prince William,Prince Charles) 
+son(Prince Harry,Prince Charles)
+
+son(Prince William,Princess Diana) 
+son(Prince Harry,Princess Diana)
+
+son(Prince George,Prince William)
+son(Prince Louis,Prince William)
+
+
+son(Prince George,Duchess Kate Middleton)
+son(Prince Louis,Duchess Kate Middleton)
+
+son(Archie Harrison Mountbatten-Windsor,Prince Harry)
+son(Archie Harrison Mountbatten-Windsor,Duchess Meghan Markle)
+
+son(Peter Phillips,Mark Phillips)
+son(Peter Phillips,Princess Anne)
+
+son(Viscount James,Prince Edward)
+son(Viscount James,Countess Sophie Rhys-Jones)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
