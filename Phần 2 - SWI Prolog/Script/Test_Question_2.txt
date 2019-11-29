@@ -1,0 +1,30 @@
+1. Có những tổ chức nào trong Nhà trường?
+2. Hội sinh viên có phải một tổ chức không?
+3. Công nghệ thông tin có phải một tổ chức không?
+4. Có những đơn vị nào trong Nhà trường?
+5. Trí tuệ nhân tạo AILab có phải là một đơn vị không?
+6. Đại học Sư phạm có phải một đơn vị không?
+7. Phòng chức năng bao gồm những đơn vị nào?
+8. Trung tâm bao gồm Hỗ trợ sinh viên đúng không?
+9. Tổ chức nào bao gồm Vật liệu kỹ thuật cao?
+10. Tổ chức nào hỗ trợ Ban giám hiệu?
+11. Đoàn thanh niên hỗ trợ tổ chức nào?
+12. Đinh Bá Tiến lãnh đạo đơn vị nào?
+13. Đào tạo quốc tế ITEC do ai lãnh đạo?
+14. Nêu tên các lãnh đạo và các đơn vị của lãnh đạo tương ứng.
+15. Tổ chức nào điều hành Ban giám hiệu nhà trường?
+16. Ban giám hiệu điều hành tổ chức nào?
+17. Nhà trường gồm những khoa nào?
+18. Giáo dục thể chất có phải là một khoa không?
+19. Có những bộ môn nào trong trường?
+20. Có những phòng chức năng nào?
+21. Trí tuệ nhân tạo AILab có phải là một phòng chức năng không?
+22. Hỗ trợ sinh viên có phải là một trung tâm không?
+23. Có những phòng thí nghiệm nào trong trường?
+24. Trưởng khoa Hóa học là ai?
+25. Nêu tên Bộ môn và trưởng Bộ môn tương ứng.
+26. Nguyễn Văn Tịnh là trưởng phòng Hỗ trợ sinh viên?
+27. Trương Tấn Quang là giám đốc trung tâm nào ?
+28. Trưởng phòng thí nghiệm Trí tuệ nhân tạo AILab là ai?
+29. Nêu tên những phòng thì nghiệm trong trường và người trưởng phòng thí nghiệm tương ứng.
+30. Đặng Thị Phương Thảo lãnh đạo những đơn vị nào?
