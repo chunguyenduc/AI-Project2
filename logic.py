@@ -1,3 +1,6 @@
+
+def writeToFile(output, buffer):
+	output.write(buffer)
 	
 def splitLiteral(sentence):
 	#Ham tach cau thanh mang cac chuoi literal
@@ -15,6 +18,7 @@ def setClausesFromKB(KB):
 		setClauses.add(clause)
 	return setClauses
 	
+	
 
 class Clause:
 	#In logic, a clause is an expression formed from a finite collection of literals (atoms or their negations) (Source: Wikipedia)
@@ -25,7 +29,8 @@ class Clause:
 		self.numLiteral = 0
 	
 	def __key(self):
-		return (tuple(self.literals), self.numLiteral)
+		#return (self.numLiteral, dict(self.literals))
+		return (self.numLiteral, tuple(self.literals))
 
 	def __hash__(self):
 		return hash(self.__key())
@@ -33,7 +38,8 @@ class Clause:
 	def __eq__(self, other):
 		if isinstance(other, Clause):
 			return self.numLiteral == other.numLiteral and sorted(self.literals) == sorted(other.literals)
-		return False 
+		return False
+	
 		
 	def setClauseFromSentence(self, sentence):
 		
@@ -47,10 +53,6 @@ class Clause:
 	def addLiteral(self, literal):
 		self.literals.append(literal)
 		self.numLiteral += 1
-			
-	def negate(self):
-		for i in self.literals:
-			i.negate()
 		
 	def reduce(self):
 	
@@ -71,14 +73,7 @@ class Clause:
 			if liNeg in self.literals:
 				return True
 		return False
-	'''
-	def __contains__(self, item):
-		for i in self.literals:
-			if item.symbol == self.symbol and item.isNegative == self.isNegative:
-				return True
-		return False
-	'''		
-
+	
 	def __str__(self):
 		if self.numLiteral == 0:
 			return "{}"
@@ -163,23 +158,21 @@ def resolve(Ci, Cj):
 	#Neu khong co literal nao doi nghich nhau
 	return False
 						
-def PL_Resolution(KB, alphaSentence):
+def PL_Resolution(KB, alphaSentence, output):
 	#ref: PL_Resolution Pseudo code - Artificial Intelligence, A Modern Approach
 	#clauses ←the set of clauses in the CNF representation of KB ∧¬α
 	clauses = setClausesFromKB(KB)
 	alpha = Clause()
 	alpha.setClauseFromSentence(alphaSentence)
-	alpha.negate()
-	clauses.add(alpha)
-	'''
-	clauseList = list(clauses)
+
+	#add negative-alpha to clauses
+	for i in range(alpha.numLiteral):
+		c = Clause()
+		l = alpha.literals[i]
+		l.negate()
+		c.addLiteral(l)
+		clauses.add(c)
 	
-	for i in range(len(clauses)):
-		
-		for j in range(clauses[i].numLiteral):
-			print("Clause ", i, ": ", vars(clauses[i].literals[j]))
-			
-	'''
 	#new ←{}
 	new = set()
 	found = 0
@@ -187,7 +180,7 @@ def PL_Resolution(KB, alphaSentence):
 	
 	while True:
 		clauseResolve = set()
-		clauseResolvePrev = set() #Luu lai cac menh de duoc suy ra o vong lap truoc
+		#clauseResolvePrev = set() #Luu lai cac menh de duoc suy ra o vong lap truoc
 		clauseList = list(clauses)
 		for i in range(len(clauseList)-1):
 			for j in range(i+1, len(clauseList)):
@@ -197,7 +190,6 @@ def PL_Resolution(KB, alphaSentence):
 				if resolvent != False:
 					
 					if resolvent.numLiteral == 0:
-						'''print("True roi nha may dua")'''
 						found = 1
 					#new ←new ∪ resolvents
 					new.add(resolvent)
@@ -206,32 +198,28 @@ def PL_Resolution(KB, alphaSentence):
 			
 		#if new is subset of clauses then return false
 		#Lay nhung clause chua xuat hien
-		clauseResolve = clauseResolve.difference(clauseResolvePrev, clauses)
+		#clauseResolve = clauseResolve.difference(clauseResolvePrev, clauses)
+		clauseResolve = clauseResolve.difference(clauses)
 		
-		print(len(clauseResolve))
+		output.write(str(len(clauseResolve)) + '\n')
 		for c in list(clauseResolve):
-			print(str(c))
+			output.write(str(c) + '\n')
 		if found == 1:
 			return True
 		if new.issubset(clauses):
 			return False
 		clauses = clauses.union(new)
-		clauseResolvePrev = clauseResolve
-		'''print(clauses)
-		'''
+		#clauseResolvePrev = clauseResolve
+		
 	
 def main():
-	input = open("input.txt")
+	input = open("input_1.txt")
+	output = open("output.txt", "w")
 	
 	#Cau alpha
 	alphaSentence = input.readline()
 	alphaSentence = alphaSentence.rstrip()	#Xoa dau \n o cuoi
 	
-	'''
-	alpha = Clause()
-	alpha.setClauseFromSentence(alphaSentence)
-	alpha.negate()
-	'''
 	
 	#So menh de cua KB
 	numClause = int(input.readline())
@@ -243,19 +231,11 @@ def main():
 		s = s.rstrip()
 		KB.append(s)
 	
-	print(KB)
-	
-	'''
-	KB = KnowledgeBase()
-	KB.setKB(sentences)
-	KB.addClause(alpha)
-	'''
-	if PL_Resolution(KB, alphaSentence) == True:
-		print("YES")
+	if PL_Resolution(KB, alphaSentence, output) == True:
+		output.write("YES\n")
 	else:
-		print("NO")
-	
-	
-	'''KB.printKB()'''
+		output.write("NO\n")
+	input.close()
+	output.close()
 	
 main()
