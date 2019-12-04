@@ -1,0 +1,30 @@
+1. to_chuc(TC).
+2. to_chuc('Hoi sinh vien').
+3. to_chuc('Cong nghe thong tin').
+4. don_vi(DV).
+5. don_vi('Tri tue nhan tao AILab').
+6. don_vi('Dai hoc su pham').
+7. bao_gom('Phong chuc nang',DV).
+8. bao_gom('Trung tam','Ho tro sinh vien').
+9. bao_gom(TC,'Vat lieu ky thuat cao').
+10. ho_tro(TC,'Ban giam hieu').
+11. ho_tro('Doan thanh nien',TC2).
+12. lanh_dao('Dinh Ba Tien',DV).
+13. lanh_dao(LD,'Dao tao quoc te ITEC').
+14. lanh_dao(LD,DV).
+15. dieu_hanh(TC1,'Ban giam hieu').
+16. dieu_hanh('Ban giam hieu',TC2).
+17. khoa(K).
+18. khoa('Giao duc the chat').
+19. bo_mon(BM).
+20. phong_chuc_nang(PCN).
+21. phong_chuc_nang('Tri tue nhan tao AILab').
+22. trung_tam('Ho tro sinh vien').
+23. phong_thi_nghiem(PTN).
+24. truong_khoa(TK,'Hoa hoc').
+25. truong_bo_mon(TBM,BM).
+26. truong_phong('Nguyen Van Tinh','Ho tro sinh vien').
+27. giam_doc('Truong Tan Quang',TT).
+28. truong_phong_thi_nghiem(TPTN,'Tri tue nhan tao AILab').
+29. truong_phong_thi_nghiem(TPTN,PTN).
+30. lanh_dao('Dang Thi Phuong Thao',DV).

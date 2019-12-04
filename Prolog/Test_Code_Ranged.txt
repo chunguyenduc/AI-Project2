@@ -1,0 +1,30 @@
+1. married('Queen Elizabeth II','Prince Philip').
+2. divorced('Prince Charles',Person2). (chưa xử lý trùng)
+3. husband('Prince William', 'Duchess Meghan Markle').
+4. husband(Person, 'Princess Anne').
+5. wife('Princess Diana',Husband).
+6. wife('Princess Anne','Timothy Laurence').
+7. father(Parent,'Princess Beatrice')
+8. father('Prince Edward', 'Viscount James').
+9. child('Prince Andrew','Prince Philip').
+10. child(Child,'Queen Elizabeth II').
+11. son('Prince Harry',Parent).
+12. son('Mike Tindall',Parent).
+13. daughter(Child,'Prince Philip').
+14. daughter('Prince Harry','Prince Charles').
+15. grandparent(GP,'Princess Eugenie').
+16. grandparent('Queen Elizabeth II','Lady Louise Windsor').
+17. grandmother(GM,'Autumn Phillips').
+18. grandmother('Prince Charles','Prince George').
+19. grandfather(GF,'Princess Charlotte').
+20. grandchild('Peter Phillips','Prince Andrew').
+21. granddaughter('Lady Louise Windsor','Prince Philip').
+22. sibling('Princess Eugenie',Person2). (lặp 2 lần)
+23. brother('Prince William',Sibling). (lặp 2 lần)
+24. sister('Princess Charlotte','Prince George').
+25. aunt('Princess Anne','Prince Louis').
+26. uncle('Captian Mark Phillips', NieceNephew).
+27. niece('Princess Beatrice',AuntUncle).
+28. nephew('Mike Tindall','Queen Eilizabeth II').
+29. grandchild(GC,'Prince Philip'). 
+30. son(Child,Parent).

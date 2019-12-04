@@ -1,0 +1,5 @@
+Tổ chức file:
+- British_Royal_Family.pl là file source code chính của chương trình, nộp file này nè.
+- File Test_Question.txt là file câu hỏi biểu diễn bằng lời (có thể thêm vào trong báo cáo).
+- File Test_Code_Ranged.txt là file câu hỏi biểu diễn bằng code, là các test case, copy paste vào trong chương trình để truy vấn.
+- File Results.txt là file kết quả thực tế chạy từ các bộ test case trên và các lỗi được ghi chú nếu có.
